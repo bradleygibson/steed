@@ -1,6 +1,8 @@
 #![feature(alloc)]
 #![feature(allow_internal_unstable)]
 #![feature(asm)]
+#![feature(box_syntax)]
+#![feature(cfg_target_vendor)]
 #![feature(collections)]
 #![feature(collections_bound)]
 #![feature(collections_range)]
@@ -9,6 +11,7 @@
 #![feature(core_intrinsics)]
 #![feature(custom_attribute)]
 #![feature(dropck_parametricity)]
+#![feature(exact_size_is_empty)]
 #![feature(fused)]
 #![feature(heap_api)]
 #![feature(int_error_internals)]
@@ -17,18 +20,17 @@
 #![feature(naked_functions)]
 #![feature(oom)]
 #![feature(prelude_import)]
-#![feature(raw)]
 #![feature(rand)]
+#![feature(raw)]
 #![feature(shared)]
 #![feature(sip_hash_13)]
 #![feature(slice_concat_ext)]
+#![feature(slice_patterns)]
 #![feature(staged_api)]
 #![feature(try_from)]
 #![feature(unicode)]
 #![feature(unique)]
 #![feature(zero_one)]
-#![feature(slice_patterns)]
-#![feature(cfg_target_vendor)]
 #![no_std]
 
 #![stable(feature = "rust1", since = "1.0.0")]
@@ -149,6 +151,8 @@ pub mod io;
 pub mod ascii;
 // Rust 1.15.0
 pub mod collections;
+// Rust 1.15.0
+pub mod env;
 // Rust 1.15.0
 pub mod error;
 // Rust 1.15.0
